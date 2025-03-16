@@ -1,0 +1,3 @@
+python-whois
+openai
+python-dotenv
