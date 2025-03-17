@@ -60,9 +60,10 @@ def add_tlds(list_of_names: list) -> list:
     domains_list = []
     for name in list_of_names:
         for tld in tlds:
-            if not name.endswith(tld):
-                name += tld
-            domains_list.append(name)
+            clean_name = name.strip()
+            if not clean_name.endswith(tld):
+                clean_name += tld
+            domains_list.append(clean_name)
     return domains_list
         
 def check_availability(list_of_names):
